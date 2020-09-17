@@ -3,13 +3,13 @@
     <div class='find'>
       <b-form-input type="text" name="" id="" 
         placeholder='IP'
-        class='mb-3'
+        class='mb-3 ip-input'
         v-model='firstIP'
         :state='isValid(firstIP)'
       ></b-form-input>
       <b-form-input type="text" name="" id="" 
         placeholder='До'
-        class='mb-3'
+        class='mb-3 ip-input'
         v-model='secondIP'
         :state='isValid(secondIP)'
       ></b-form-input>
@@ -22,7 +22,6 @@
       <b-alert show variant="danger"
         v-if='fail || fail_last'
         class='surfacing'>Неверный диапазон!</b-alert>
-      <slot></slot>
     </div>
   </div>
 </template>
